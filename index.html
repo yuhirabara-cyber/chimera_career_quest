@@ -91,10 +91,10 @@
         </div>
 
         <div class="flex flex-wrap items-center gap-2">
-          <button onclick="pickRandomCards(5)" class="bg-amber-100 hover:bg-amber-200 text-amber-900 text-xs font-bold px-3.5 py-2 rounded-xl border border-amber-300 transition flex items-center gap-1.5">
+          <button type="button" onclick="pickRandomCards(5)" class="bg-amber-100 hover:bg-amber-200 text-amber-900 text-xs font-bold px-3.5 py-2 rounded-xl border border-amber-300 transition flex items-center gap-1.5">
             🎲 おまかせガチャ（5枚）
           </button>
-          <button onclick="openCustomCardModal()" class="bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-bold px-3.5 py-2 rounded-xl border border-indigo-200 transition flex items-center gap-1.5">
+          <button type="button" onclick="openCustomCardModal()" class="bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-bold px-3.5 py-2 rounded-xl border border-indigo-200 transition flex items-center gap-1.5">
             ➕ オリジナルカードを作る
           </button>
         </div>
@@ -103,10 +103,10 @@
       <!-- フィルター＆検索バー -->
       <div class="px-5 py-3 bg-white border-b border-slate-100 flex flex-wrap items-center justify-between gap-3">
         <div class="flex flex-wrap gap-1.5" id="category-tabs">
-          <button data-cat="all" class="cat-tab active px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-800 text-white">すべて</button>
-          <button data-cat="verb_renyo" class="cat-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-50 text-blue-700 hover:bg-blue-100">① 動き・アクション（〜し）</button>
-          <button data-cat="noun" class="cat-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-50 text-emerald-700 hover:bg-emerald-100">② 対象・テーマ（名詞）</button>
-          <button data-cat="adv" class="cat-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-50 text-amber-700 hover:bg-amber-100">③ スタイル・こだわり（副詞）</button>
+          <button type="button" data-cat="all" class="cat-tab active px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-800 text-white">すべて</button>
+          <button type="button" data-cat="verb_renyo" class="cat-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-50 text-blue-700 hover:bg-blue-100">① 動き・アクション（〜し）</button>
+          <button type="button" data-cat="noun" class="cat-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-50 text-emerald-700 hover:bg-emerald-100">② 対象・テーマ（名詞）</button>
+          <button type="button" data-cat="adv" class="cat-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-50 text-amber-700 hover:bg-amber-100">③ スタイル・こだわり（副詞）</button>
         </div>
 
         <div class="relative w-full sm:w-56">
@@ -132,7 +132,7 @@
           </div>
           <p class="text-sm text-slate-600 mt-1">手元カードやつなぎパーツ（助詞）を組み合わせて「〜〜〜はたらく」の文をつくろう！</p>
         </div>
-        <button onclick="clearHand()" class="text-xs text-slate-500 hover:text-rose-600 font-bold px-2.5 py-1.5 rounded-lg hover:bg-rose-50 transition">
+        <button type="button" onclick="clearHand()" class="text-xs text-slate-500 hover:text-rose-600 font-bold px-2.5 py-1.5 rounded-lg hover:bg-rose-50 transition">
           手元カードをすべて外す
         </button>
       </div>
@@ -152,15 +152,15 @@
         <!-- つなぎパーツバー -->
         <div class="bg-purple-50/70 border border-purple-100 rounded-xl p-3 flex flex-wrap items-center gap-2">
           <span class="text-xs font-bold text-purple-800 mr-1">🔗 つなぎパーツ（クリックで文章に挿入）：</span>
-          <button onclick="addParticleToSentence('を')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">を</button>
-          <button onclick="addParticleToSentence('に')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">に</button>
-          <button onclick="addParticleToSentence('が')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">が</button>
-          <button onclick="addParticleToSentence('で')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">で</button>
-          <button onclick="addParticleToSentence('の')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">の</button>
-          <button onclick="addParticleToSentence('と')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">と</button>
-          <button onclick="addParticleToSentence('から')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">から</button>
-          <button onclick="addParticleToSentence('まで')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">まで</button>
-          <button onclick="addParticleToSentence('、')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">、</button>
+          <button type="button" onclick="addParticleToSentence('を')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">を</button>
+          <button type="button" onclick="addParticleToSentence('に')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">に</button>
+          <button type="button" onclick="addParticleToSentence('が')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">が</button>
+          <button type="button" onclick="addParticleToSentence('で')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">で</button>
+          <button type="button" onclick="addParticleToSentence('の')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">の</button>
+          <button type="button" onclick="addParticleToSentence('と')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">と</button>
+          <button type="button" onclick="addParticleToSentence('から')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">から</button>
+          <button type="button" onclick="addParticleToSentence('まで')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">まで</button>
+          <button type="button" onclick="addParticleToSentence('、')" class="px-3 py-1 bg-white hover:bg-purple-100 text-purple-900 font-bold text-sm rounded-lg border border-purple-200 shadow-xs transition">、</button>
         </div>
 
         <!-- 文章組み立てステージ -->
@@ -169,7 +169,7 @@
             <span class="text-xs font-black text-indigo-800 flex items-center gap-1.5">
               ✨ 組み立てエリア（ドラッグ＆ドロップ、または ◀ ▶ で順番変更）
             </span>
-            <button onclick="clearSentence()" class="text-xs font-bold text-indigo-600 hover:text-indigo-900 underline">
+            <button type="button" onclick="clearSentence()" class="text-xs font-bold text-indigo-600 hover:text-indigo-900 underline">
               文をリセット
             </button>
           </div>
@@ -190,7 +190,7 @@
                 はたらく
               </p>
             </div>
-            <button onclick="saveSentenceToHistory()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-3.5 py-2.5 rounded-xl transition shrink-0">
+            <button type="button" onclick="saveSentenceToHistory()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-3.5 py-2.5 rounded-xl transition shrink-0">
               📌 この文を候補にキープ
             </button>
           </div>
@@ -222,10 +222,10 @@
           <div class="flex flex-wrap items-center justify-between gap-2">
             <span class="text-xs font-black text-pink-900">① まずはこの質問文をコピーしてGeminiに聞こう</span>
             <div class="flex flex-wrap gap-2">
-              <button onclick="copyPromptOnly()" class="bg-white hover:bg-pink-100 text-pink-700 border border-pink-300 font-bold text-xs px-3.5 py-2 rounded-xl shadow-xs transition">
+              <button type="button" onclick="copyPromptOnly()" class="bg-white hover:bg-pink-100 text-pink-700 border border-pink-300 font-bold text-xs px-3.5 py-2 rounded-xl shadow-xs transition">
                 📋 質問文だけコピー
               </button>
-              <button onclick="copyAndOpenGemini()" class="bg-gradient-to-r from-pink-600 to-indigo-600 hover:from-pink-700 hover:to-indigo-700 text-white font-black text-xs sm:text-sm px-4 py-2 rounded-xl shadow-md transition flex items-center gap-1.5">
+              <button type="button" onclick="copyAndOpenGemini()" class="bg-gradient-to-r from-pink-600 to-indigo-600 hover:from-pink-700 hover:to-indigo-700 text-white font-black text-xs sm:text-sm px-4 py-2 rounded-xl shadow-md transition flex items-center gap-1.5">
                 🚀 コピーしてGeminiを開く ↗
               </button>
             </div>
@@ -244,7 +244,7 @@
             class="w-full p-3 text-sm bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 leading-relaxed"></textarea>
           <div class="flex flex-wrap items-center justify-between gap-2">
             <span class="text-xs text-slate-500">※番号付きのリスト（1. 〜 10.）を自動で10枚のカードに変換します</span>
-            <button onclick="parseGeminiResponse()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-black text-sm px-5 py-2.5 rounded-xl shadow-sm transition">
+            <button type="button" onclick="parseGeminiResponse()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-black text-sm px-5 py-2.5 rounded-xl shadow-sm transition">
               ✨ 回答を10枚のカードにする
             </button>
           </div>
@@ -256,7 +256,7 @@
             🎉 クリアおめでとう！「アリかも！👍」な働き方が3つ以上見つかりました！
           </p>
           <p class="text-xs sm:text-sm text-amber-800 mt-1">
-            気になる働き方の「🔍 なり方調査プロンプトをコピー」を使って、どうすればたどり着けるかも調べてみよう！
+            気になる働き方の「🔍 調査プロンプトをコピー」を使って、どうすればたどり着けるかも調べてみよう！
           </p>
         </div>
 
@@ -303,7 +303,7 @@
         <div class="bg-emerald-50/70 border border-emerald-200 rounded-xl p-4 space-y-2.5">
           <div class="flex flex-wrap items-center justify-between gap-2">
             <span class="text-xs font-black text-emerald-900">📋 提出・シェア用テキスト（自動作成）</span>
-            <button onclick="copyShareText()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs sm:text-sm px-4 py-2 rounded-xl shadow-sm transition">
+            <button type="button" onclick="copyShareText()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs sm:text-sm px-4 py-2 rounded-xl shadow-sm transition">
               📋 結果をコピーする
             </button>
           </div>
@@ -319,7 +319,7 @@
     <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl space-y-4 animate-pop-in">
       <div class="flex items-center justify-between">
         <h3 class="text-lg font-black text-slate-800">➕ オリジナルカードを作る</h3>
-        <button onclick="closeCustomCardModal()" class="text-slate-400 hover:text-slate-700 text-xl font-bold">&times;</button>
+        <button type="button" onclick="closeCustomCardModal()" class="text-slate-400 hover:text-slate-700 text-xl font-bold">&times;</button>
       </div>
       <p class="text-xs text-slate-600">カードにない言葉（好きなゲーム、趣味、推しの要素など）を自由に追加できます。</p>
       <div class="space-y-3">
@@ -338,8 +338,8 @@
         </div>
       </div>
       <div class="flex justify-end gap-2 pt-2">
-        <button onclick="closeCustomCardModal()" class="px-4 py-2 text-xs font-bold text-slate-600 hover:bg-slate-100 rounded-xl">キャンセル</button>
-        <button onclick="addCustomCard()" class="px-5 py-2 text-xs font-black bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl shadow-sm">追加して手元に取る</button>
+        <button type="button" onclick="closeCustomCardModal()" class="px-4 py-2 text-xs font-bold text-slate-600 hover:bg-slate-100 rounded-xl">キャンセル</button>
+        <button type="button" onclick="addCustomCard()" class="px-5 py-2 text-xs font-black bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl shadow-sm">追加して手元に取る</button>
       </div>
     </div>
   </div>
@@ -352,30 +352,38 @@
   <script>
     // ==========================================
     // 1. スライドp22〜34 ワードビュッフェ全データ
-    // （しめくくり動詞・助詞・はたらくは除外）
     // ==========================================
-    const INITIAL_CARDS = [
-      // p22-24: 動詞（連用形）
-      ...['極め','支え','つくり','描き','教え','伝え','笑わせ','管理し','関わり','整え','届け','貢献し',
-          '増やし','減らし','調べ','まとめ','見せ','学び','操作し','守り','話し','聞き','直し','助け',
-          '解決し','表現し','集め','向き合い','育て','つなげ','信じ','気づき','探し','考え','広め','記録し']
-        .map((w, i) => ({ id: `vr_${i}`, text: w, cat: 'verb_renyo' })),
-
-      // p28-32: 名詞・対象
-      ...['人','モノ','空間','企画','チーム','データ','お金','情報','子ども','高齢者','デザイン','乗り物',
-          '会社','お店','食べ物','機械','効率','時間','ルール','文章','音楽','アート','知識','家事',
-          '家','運動','見た目','感動','環境','学び','仕組み','数字','健康','建物','言葉','エンタメ',
-          '安全','海外','作品','伝統','遊び','サービス','アイデア','信念','自然','動物','おもちゃ','道具',
-          '心','体','表','裏']
-        .map((w, i) => ({ id: `n_${i}`, text: w, cat: 'noun' })),
-
-      // p33-34: 副詞・スタイル
-      ...['じっくり','すばやく','正確に','面白く','毎日','たまに','大きく','小さく','あちこちで','落ち着いて','1人で','ていねいに',
-          'ゼロから','自由に','コツコツ','みんなで','徹底的に','ゆっくり']
-        .map((w, i) => ({ id: `adv_${i}`, text: w, cat: 'adv' }))
+    var VERB_WORDS = [
+      '極め','支え','つくり','描き','教え','伝え','笑わせ','管理し','関わり','整え','届け','貢献し',
+      '増やし','減らし','調べ','まとめ','見せ','学び','操作し','守り','話し','聞き','直し','助け',
+      '解決し','表現し','集め','向き合い','育て','つなげ','信じ','気づき','探し','考え','広め','記録し'
     ];
 
-    const CAT_STYLES = {
+    var NOUN_WORDS = [
+      '人','モノ','空間','企画','チーム','データ','お金','情報','子ども','高齢者','デザイン','乗り物',
+      '会社','お店','食べ物','機械','効率','時間','ルール','文章','音楽','アート','知識','家事',
+      '家','運動','見た目','感動','環境','学び','仕組み','数字','健康','建物','言葉','エンタメ',
+      '安全','海外','作品','伝統','遊び','サービス','アイデア','信念','自然','動物','おもちゃ','道具',
+      '心','体','表','裏'
+    ];
+
+    var ADV_WORDS = [
+      'じっくり','すばやく','正確に','面白く','毎日','たまに','大きく','小さく','あちこちで','落ち着いて','1人で','ていねいに',
+      'ゼロから','自由に','コツコツ','みんなで','徹底的に','ゆっくり'
+    ];
+
+    var allCards = [];
+    for (var i = 0; i < VERB_WORDS.length; i++) {
+      allCards.push({ id: 'vr_' + i, text: VERB_WORDS[i], cat: 'verb_renyo' });
+    }
+    for (var j = 0; j < NOUN_WORDS.length; j++) {
+      allCards.push({ id: 'n_' + j, text: NOUN_WORDS[j], cat: 'noun' });
+    }
+    for (var k = 0; k < ADV_WORDS.length; k++) {
+      allCards.push({ id: 'adv_' + k, text: ADV_WORDS[k], cat: 'adv' });
+    }
+
+    var CAT_STYLES = {
       verb_renyo: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-900', badge: '動き' },
       noun:       { bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-900', badge: '対象' },
       adv:        { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-900', badge: 'スタイル' },
@@ -385,13 +393,12 @@
     // ==========================================
     // 2. アプリ状態管理
     // ==========================================
-    let allCards = [...INITIAL_CARDS];
-    let currentCategory = 'all';
-    let handCards = [];
-    let sentenceTokens = [];
-    let sentenceHistory = [];
-    let proposals = []; // { id, title, desc, liked, note }
-    let dragSrcIndex = null;
+    var currentCategory = 'all';
+    var handCards = [];
+    var sentenceTokens = [];
+    var sentenceHistory = [];
+    var proposals = [];
+    var dragSrcIndex = null;
 
     // ==========================================
     // 3. 初期化＆レンダリング関数
@@ -404,68 +411,88 @@
     }
 
     function setupCategoryTabs() {
-      const tabs = document.querySelectorAll('.cat-tab');
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          tabs.forEach(t => {
-            t.classList.remove('active', 'bg-slate-800', 'text-white');
-          });
-          tab.classList.add('active', 'bg-slate-800', 'text-white');
-          currentCategory = tab.dataset.cat;
+      var tabs = document.querySelectorAll('.cat-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].addEventListener('click', function() {
+          for (var j = 0; j < tabs.length; j++) {
+            tabs[j].classList.remove('active', 'bg-slate-800', 'text-white');
+          }
+          this.classList.add('active', 'bg-slate-800', 'text-white');
+          currentCategory = this.getAttribute('data-cat');
           renderBuffet();
         });
-      });
+      }
     }
 
     function renderBuffet() {
-      const grid = document.getElementById('buffet-grid');
-      const query = document.getElementById('word-search').value.trim();
+      var grid = document.getElementById('buffet-grid');
+      var searchEl = document.getElementById('word-search');
+      var query = searchEl ? searchEl.value.trim() : '';
 
-      const filtered = allCards.filter(card => {
-        const matchCat = currentCategory === 'all' || card.cat === currentCategory;
-        const matchQuery = !query || card.text.includes(query);
+      var filtered = allCards.filter(function(card) {
+        var matchCat = (currentCategory === 'all' || card.cat === currentCategory);
+        var matchQuery = (!query || card.text.indexOf(query) !== -1);
         return matchCat && matchQuery;
       });
 
       if (filtered.length === 0) {
-        grid.innerHTML = `<p class="col-span-full text-center text-xs text-slate-400 py-6">該当するカードが見つかりません。「➕ オリジナルカードを作る」から追加できます！</p>`;
+        grid.innerHTML = '<p class="col-span-full text-center text-xs text-slate-400 py-6">該当するカードが見つかりません。「➕ オリジナルカードを作る」から追加できます！</p>';
         return;
       }
 
-      grid.innerHTML = filtered.map(card => {
-        const st = CAT_STYLES[card.cat] || CAT_STYLES.noun;
-        const inHand = handCards.some(h => h.id === card.id);
-        return `
-          <button onclick="toggleHandCard('${card.id}')"
-            class="word-card relative px-2.5 py-2.5 rounded-xl border text-center font-bold text-sm ${st.bg} ${st.border} ${st.text} ${inHand ? 'ring-2 ring-indigo-500 opacity-75' : ''}">
-            <span>${escapeHtml(card.text)}</span>
-            ${inHand ? '<span class="absolute -top-1.5 -right-1.5 bg-indigo-600 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center shadow">✓</span>' : ''}
-          </button>
-        `;
-      }).join('');
+      var html = '';
+      for (var i = 0; i < filtered.length; i++) {
+        var card = filtered[i];
+        var st = CAT_STYLES[card.cat] || CAT_STYLES.noun;
+        var inHand = handCards.some(function(h) { return h.id === card.id; });
+        var ringClass = inHand ? 'ring-2 ring-indigo-500 opacity-75' : '';
+        var checkMark = inHand ? '<span class="absolute -top-1.5 -right-1.5 bg-indigo-600 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center shadow">✓</span>' : '';
+
+        html += '<button type="button" onclick="toggleHandCard(\'' + card.id + '\')" ' +
+          'class="word-card relative px-2.5 py-2.5 rounded-xl border text-center font-bold text-sm ' +
+          st.bg + ' ' + st.border + ' ' + st.text + ' ' + ringClass + '">' +
+          '<span>' + escapeHtml(card.text) + '</span>' +
+          checkMark +
+          '</button>';
+      }
+      grid.innerHTML = html;
     }
 
     function toggleHandCard(cardId) {
-      const idx = handCards.findIndex(c => c.id === cardId);
+      var idx = -1;
+      for (var i = 0; i < handCards.length; i++) {
+        if (handCards[i].id === cardId) {
+          idx = i;
+          break;
+        }
+      }
       if (idx >= 0) {
         handCards.splice(idx, 1);
       } else {
-        const card = allCards.find(c => c.id === cardId);
-        if (card) handCards.push(card);
+        for (var j = 0; j < allCards.length; j++) {
+          if (allCards[j].id === cardId) {
+            handCards.push(allCards[j]);
+            break;
+          }
+        }
       }
       renderBuffet();
       renderHand();
     }
 
     function pickRandomCards(count) {
-      const unpicked = allCards.filter(c => !handCards.some(h => h.id === c.id));
+      var unpicked = allCards.filter(function(c) {
+        return !handCards.some(function(h) { return h.id === c.id; });
+      });
       if (unpicked.length === 0) return;
-      const shuffled = [...unpicked].sort(() => Math.random() - 0.5);
-      const picked = shuffled.slice(0, count);
-      handCards.push(...picked);
+      var shuffled = unpicked.slice().sort(function() { return Math.random() - 0.5; });
+      var picked = shuffled.slice(0, count);
+      for (var i = 0; i < picked.length; i++) {
+        handCards.push(picked[i]);
+      }
       renderBuffet();
       renderHand();
-      showToast(`🎲 ランダムに${picked.length}枚のカードを手元に追加しました！`);
+      showToast('🎲 ランダムに' + picked.length + '枚のカードを手元に追加しました！');
     }
 
     function clearHand() {
@@ -475,37 +502,44 @@
     }
 
     function renderHand() {
-      const pool = document.getElementById('hand-pool');
+      var pool = document.getElementById('hand-pool');
       document.getElementById('header-hand-count').textContent = handCards.length;
 
       if (handCards.length === 0) {
-        pool.innerHTML = `<p class="text-xs text-slate-400 w-full text-center py-2">まだカードが選ばれていません（上のビュッフェからクリックしよう）</p>`;
+        pool.innerHTML = '<p class="text-xs text-slate-400 w-full text-center py-2">まだカードが選ばれていません（上のビュッフェからクリックしよう）</p>';
         return;
       }
 
-      pool.innerHTML = handCards.map(card => {
-        const st = CAT_STYLES[card.cat] || CAT_STYLES.noun;
-        return `
-          <div class="inline-flex items-center rounded-xl border ${st.bg} ${st.border} ${st.text} shadow-2xs overflow-hidden animate-pop-in">
-            <button onclick="addCardToSentence('${card.id}')" title="文章に追加"
-              class="px-3 py-1.5 text-sm font-bold hover:brightness-95 transition flex items-center gap-1">
-              <span>${escapeHtml(card.text)}</span>
-              <span class="text-[10px] opacity-60">＋</span>
-            </button>
-            <button onclick="toggleHandCard('${card.id}')" title="手元から外す"
-              class="px-2 py-1.5 text-xs opacity-50 hover:opacity-100 hover:bg-black/5 border-l ${st.border}">
-              ×
-            </button>
-          </div>
-        `;
-      }).join('');
+      var html = '';
+      for (var i = 0; i < handCards.length; i++) {
+        var card = handCards[i];
+        var st = CAT_STYLES[card.cat] || CAT_STYLES.noun;
+        html += '<div class="inline-flex items-center rounded-xl border ' + st.bg + ' ' + st.border + ' ' + st.text + ' shadow-2xs overflow-hidden animate-pop-in">' +
+          '<button type="button" onclick="addCardToSentence(\'' + card.id + '\')" title="文章に追加" ' +
+          'class="px-3 py-1.5 text-sm font-bold hover:brightness-95 transition flex items-center gap-1">' +
+          '<span>' + escapeHtml(card.text) + '</span>' +
+          '<span class="text-[10px] opacity-60">＋</span>' +
+          '</button>' +
+          '<button type="button" onclick="toggleHandCard(\'' + card.id + '\')" title="手元から外す" ' +
+          'class="px-2 py-1.5 text-xs opacity-50 hover:opacity-100 hover:bg-black/5 border-l ' + st.border + '">' +
+          '×' +
+          '</button>' +
+          '</div>';
+      }
+      pool.innerHTML = html;
     }
 
     // ==========================================
     // 4. 文章組み立て・並び替えロジック
     // ==========================================
     function addCardToSentence(cardId) {
-      const card = allCards.find(c => c.id === cardId);
+      var card = null;
+      for (var i = 0; i < allCards.length; i++) {
+        if (allCards[i].id === cardId) {
+          card = allCards[i];
+          break;
+        }
+      }
       if (!card) return;
       sentenceTokens.push({
         uid: 'tok_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
@@ -530,9 +564,9 @@
     }
 
     function moveSentenceToken(index, dir) {
-      const target = index + dir;
+      var target = index + dir;
       if (target < 0 || target >= sentenceTokens.length) return;
-      const temp = sentenceTokens[index];
+      var temp = sentenceTokens[index];
       sentenceTokens[index] = sentenceTokens[target];
       sentenceTokens[target] = temp;
       renderSentence();
@@ -544,44 +578,47 @@
     }
 
     function getCompletedSentence() {
-      return sentenceTokens.map(t => t.text).join('') + 'はたらく';
+      var str = '';
+      for (var i = 0; i < sentenceTokens.length; i++) {
+        str += sentenceTokens[i].text;
+      }
+      return str + 'はたらく';
     }
 
     function renderSentence() {
-      const container = document.getElementById('sentence-builder');
-      const tokensHtml = sentenceTokens.map((tok, idx) => {
-        const st = CAT_STYLES[tok.cat] || CAT_STYLES.noun;
-        return `
-          <div draggable="true"
-            ondragstart="handleDragStart(event, ${idx})"
-            ondragover="handleDragOver(event)"
-            ondragleave="handleDragLeave(event)"
-            ondrop="handleDrop(event, ${idx})"
-            class="sentence-slot inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl border-2 ${st.bg} ${st.border} ${st.text} font-bold text-sm sm:text-base cursor-grab active:cursor-grabbing shadow-xs">
-            <button onclick="moveSentenceToken(${idx}, -1)" ${idx === 0 ? 'disabled' : ''}
-              class="text-[10px] px-1 rounded hover:bg-black/10 disabled:opacity-20" title="左へ">◀</button>
-            <span class="px-1">${escapeHtml(tok.text)}</span>
-            <button onclick="moveSentenceToken(${idx}, 1)" ${idx === sentenceTokens.length - 1 ? 'disabled' : ''}
-              class="text-[10px] px-1 rounded hover:bg-black/10 disabled:opacity-20" title="右へ">▶</button>
-            <button onclick="removeSentenceToken(${idx})"
-              class="ml-0.5 text-xs text-slate-400 hover:text-rose-600 font-black px-1" title="削除">×</button>
-          </div>
-        `;
-      }).join('');
+      var container = document.getElementById('sentence-builder');
+      var tokensHtml = '';
 
-      const placeholder = sentenceTokens.length === 0
-        ? `<span class="text-xs text-slate-400 px-2">上の手元カードやつなぎパーツをクリックして並べよう →</span>`
+      for (var idx = 0; idx < sentenceTokens.length; idx++) {
+        var tok = sentenceTokens[idx];
+        var st = CAT_STYLES[tok.cat] || CAT_STYLES.noun;
+        var leftDisabled = (idx === 0) ? 'disabled' : '';
+        var rightDisabled = (idx === sentenceTokens.length - 1) ? 'disabled' : '';
+
+        tokensHtml += '<div draggable="true" ' +
+          'ondragstart="handleDragStart(event, ' + idx + ')" ' +
+          'ondragover="handleDragOver(event)" ' +
+          'ondragleave="handleDragLeave(event)" ' +
+          'ondrop="handleDrop(event, ' + idx + ')" ' +
+          'class="sentence-slot inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl border-2 ' + st.bg + ' ' + st.border + ' ' + st.text + ' font-bold text-sm sm:text-base cursor-grab active:cursor-grabbing shadow-xs">' +
+          '<button type="button" onclick="moveSentenceToken(' + idx + ', -1)" ' + leftDisabled + ' ' +
+          'class="text-[10px] px-1 rounded hover:bg-black/10 disabled:opacity-20" title="左へ">◀</button>' +
+          '<span class="px-1">' + escapeHtml(tok.text) + '</span>' +
+          '<button type="button" onclick="moveSentenceToken(' + idx + ', 1)" ' + rightDisabled + ' ' +
+          'class="text-[10px] px-1 rounded hover:bg-black/10 disabled:opacity-20" title="右へ">▶</button>' +
+          '<button type="button" onclick="removeSentenceToken(' + idx + ')" ' +
+          'class="ml-0.5 text-xs text-slate-400 hover:text-rose-600 font-black px-1" title="削除">×</button>' +
+          '</div>';
+      }
+
+      var placeholder = sentenceTokens.length === 0
+        ? '<span class="text-xs text-slate-400 px-2">上の手元カードやつなぎパーツをクリックして並べよう →</span>'
         : '';
 
-      container.innerHTML = `
-        ${placeholder}
-        ${tokensHtml}
-        <div class="px-4 py-2 rounded-xl bg-slate-800 text-white font-black text-sm sm:text-base shadow-sm select-none">
-          はたらく
-        </div>
-      `;
+      container.innerHTML = placeholder + tokensHtml +
+        '<div class="px-4 py-2 rounded-xl bg-slate-800 text-white font-black text-sm sm:text-base shadow-sm select-none">はたらく</div>';
 
-      const fullSentence = getCompletedSentence();
+      var fullSentence = getCompletedSentence();
       document.getElementById('completed-sentence-text').textContent = fullSentence;
       document.getElementById('sheet-sentence').textContent = fullSentence;
 
@@ -605,7 +642,7 @@
       e.preventDefault();
       e.currentTarget.classList.remove('drag-over');
       if (dragSrcIndex === null || dragSrcIndex === targetIdx) return;
-      const moved = sentenceTokens.splice(dragSrcIndex, 1)[0];
+      var moved = sentenceTokens.splice(dragSrcIndex, 1)[0];
       sentenceTokens.splice(targetIdx, 0, moved);
       dragSrcIndex = null;
       renderSentence();
@@ -616,9 +653,10 @@
         showToast('まずはカードを1枚以上並べてみよう！');
         return;
       }
-      const text = getCompletedSentence();
-      if (!sentenceHistory.some(h => h.text === text)) {
-        sentenceHistory.unshift({ text, tokens: JSON.parse(JSON.stringify(sentenceTokens)) });
+      var text = getCompletedSentence();
+      var exists = sentenceHistory.some(function(h) { return h.text === text; });
+      if (!exists) {
+        sentenceHistory.unshift({ text: text, tokens: JSON.parse(JSON.stringify(sentenceTokens)) });
         renderSentenceHistory();
         showToast('📌 文を候補にキープしました！');
       } else {
@@ -627,19 +665,21 @@
     }
 
     function renderSentenceHistory() {
-      const box = document.getElementById('sentence-history-box');
-      const list = document.getElementById('sentence-history-list');
+      var box = document.getElementById('sentence-history-box');
+      var list = document.getElementById('sentence-history-list');
       if (sentenceHistory.length === 0) {
         box.classList.add('hidden');
         return;
       }
       box.classList.remove('hidden');
-      list.innerHTML = sentenceHistory.map((item, idx) => `
-        <button onclick="restoreSentence(${idx})"
-          class="text-xs font-bold bg-white hover:bg-indigo-100 text-indigo-800 border border-indigo-200 px-3 py-1 rounded-full transition">
-          ${escapeHtml(item.text)}
-        </button>
-      `).join('');
+      var html = '';
+      for (var i = 0; i < sentenceHistory.length; i++) {
+        html += '<button type="button" onclick="restoreSentence(' + i + ')" ' +
+          'class="text-xs font-bold bg-white hover:bg-indigo-100 text-indigo-800 border border-indigo-200 px-3 py-1 rounded-full transition">' +
+          escapeHtml(sentenceHistory[i].text) +
+          '</button>';
+      }
+      list.innerHTML = html;
     }
 
     function restoreSentence(idx) {
@@ -660,24 +700,29 @@
       document.getElementById('custom-word-input').value = '';
     }
     function addCustomCard() {
-      const word = document.getElementById('custom-word-input').value.trim();
-      const cat = document.getElementById('custom-cat-input').value;
+      var word = document.getElementById('custom-word-input').value.trim();
+      var cat = document.getElementById('custom-cat-input').value;
       if (!word) return;
-      const newCard = { id: 'custom_' + Date.now(), text: word, cat };
+      var newCard = { id: 'custom_' + Date.now(), text: word, cat: cat };
       allCards.unshift(newCard);
       handCards.push(newCard);
       closeCustomCardModal();
       renderBuffet();
       renderHand();
-      showToast(`✨「${word}」を作成して手元に追加しました！`);
+      showToast('✨「' + word + '」を作成して手元に追加しました！');
     }
 
     // ==========================================
     // 5. プロンプトコピー＆回答パースロジック
     // ==========================================
     function buildSearchPrompt() {
-      const sentence = getCompletedSentence();
-      return `私はキャリア探索のワークで「${sentence}」という働き方のイメージを作りました。\nこのイメージに当てはまる仕事や働き方・役割を10個提案してください。\n\n【条件】\n・高校生にもイメージしやすい具体的な仕事や役割にすること\n・定番の職業だけでなく、意外な切り口や新しい働き方も混ぜること\n・必ず「1. 仕事名：説明」の形式で1〜10の番号付きリストで出力すること`;
+      var sentence = getCompletedSentence();
+      return '私はキャリア探索のワークで「' + sentence + '」という働き方のイメージを作りました。\n' +
+        'このイメージに当てはまる仕事や働き方・役割を10個提案してください。\n\n' +
+        '【条件】\n' +
+        '・高校生にもイメージしやすい具体的な仕事や役割にすること\n' +
+        '・定番の職業だけでなく、意外な切り口や新しい働き方も混ぜること\n' +
+        '・必ず「1. 仕事名：説明」の形式で1〜10の番号付きリストで出力すること';
     }
 
     function updatePromptPreview() {
@@ -685,27 +730,252 @@
     }
 
     function copyPromptOnly() {
-      const promptText = buildSearchPrompt();
+      var promptText = buildSearchPrompt();
       copyToClipboard(promptText, '📋 質問文をコピーしました！Geminiに貼り付けてね');
     }
 
     function copyAndOpenGemini() {
-      const promptText = buildSearchPrompt();
+      var promptText = buildSearchPrompt();
       copyToClipboard(promptText, '📋 質問文をコピーしました！開いたGeminiの入力欄に貼り付けてね');
       window.open('https://gemini.google.com/app', '_blank', 'noopener,noreferrer');
     }
 
-    // Geminiから貼り付けられたテキストを10個のカードに解析する
     function parseGeminiResponse() {
-      const raw = document.getElementById('gemini-response-input').value.trim();
+      var raw = document.getElementById('gemini-response-input').value.trim();
       if (!raw) {
         showToast('Geminiの回答を貼り付けてからボタンを押してね！');
         return;
       }
 
-      const lines = raw.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
-      const parsed = [];
-      let currentItem = null;
+      var lines = raw.split(/\r?\n/);
+      var parsed = [];
+      var currentItem = null;
+      var itemStartRegex = /^(?:\*{0,2})(?:[1-9]|10)[\.\)．、\s:：-]+(.+)$/;
 
-      // 「1. 〜」「1) 〜」「① 〜」「**1. 〜**」などの行頭パターンを検出
-      const itemStartRegex = /^(?:\*{0,2})(
+      for (var i = 0; i < lines.length; i++) {
+        var line = lines[i].trim();
+        if (!line) continue;
+        var cleanLine = line.replace(/\*\*/g, '').trim();
+        var match = cleanLine.match(itemStartRegex);
+
+        if (match && parsed.length < 10) {
+          if (currentItem) parsed.push(currentItem);
+          var content = match[1].trim();
+          var splitMatch = content.match(/^([^：:\-—]+)[：:\-—]\s*(.+)$/);
+          if (splitMatch) {
+            currentItem = {
+              id: 'prop_' + parsed.length,
+              title: splitMatch[1].trim(),
+              desc: splitMatch[2].trim(),
+              liked: false,
+              note: ''
+            };
+          } else {
+            currentItem = {
+              id: 'prop_' + parsed.length,
+              title: content,
+              desc: '',
+              liked: false,
+              note: ''
+            };
+          }
+        } else if (currentItem) {
+          currentItem.desc += (currentItem.desc ? ' ' : '') + cleanLine;
+        }
+      }
+      if (currentItem && parsed.length < 10) {
+        parsed.push(currentItem);
+      }
+
+      if (parsed.length === 0) {
+        showToast('番号付きのリストが見つかりませんでした。Geminiの回答全文をそのまま貼り付けてみてください！');
+        return;
+      }
+
+      proposals = parsed;
+      renderProposals();
+      document.getElementById('proposals-container').classList.remove('hidden');
+      document.getElementById('share-section').classList.remove('hidden');
+      showToast('✨ ' + proposals.length + '個の働き方カードを作成しました！「アリかも！👍」を選ぼう');
+    }
+
+    function renderProposals() {
+      var grid = document.getElementById('proposals-grid');
+      var html = '';
+
+      for (var idx = 0; idx < proposals.length; idx++) {
+        var item = proposals[idx];
+        var cardBorder = item.liked ? 'border-amber-400 bg-amber-50/60 shadow-sm' : 'border-slate-200 bg-white';
+        var btnClass = item.liked ? 'bg-amber-400 text-amber-950 shadow-xs' : 'bg-slate-100 hover:bg-amber-100 text-slate-600';
+        var btnLabel = item.liked ? '👍 アリかも！' : '👍 アリかも？';
+        var descHtml = item.desc ? '<p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">' + escapeHtml(item.desc) + '</p>' : '';
+
+        html += '<div class="p-4 rounded-2xl border-2 transition flex flex-col justify-between gap-3 ' + cardBorder + '">' +
+          '<div>' +
+          '<div class="flex items-start justify-between gap-2">' +
+          '<div class="flex items-center gap-2">' +
+          '<span class="w-6 h-6 rounded-full bg-indigo-100 text-indigo-800 font-black text-xs flex items-center justify-center shrink-0">' + (idx + 1) + '</span>' +
+          '<h4 class="font-black text-base text-slate-900 leading-snug">' + escapeHtml(item.title) + '</h4>' +
+          '</div>' +
+          '<button type="button" onclick="toggleLikeProposal(' + idx + ')" ' +
+          'class="shrink-0 px-3 py-1.5 rounded-xl text-xs font-black transition flex items-center gap-1 ' + btnClass + '">' +
+          '<span>' + btnLabel + '</span>' +
+          '</button>' +
+          '</div>' +
+          descHtml +
+          '</div>' +
+          '<div class="pt-2.5 border-t border-slate-100 space-y-2">' +
+          '<div class="flex flex-wrap items-center justify-between gap-1.5">' +
+          '<span class="text-[11px] font-bold text-slate-500">🧭 なり方・たどり着き方を調べる</span>' +
+          '<button type="button" onclick="copyHowToBecomePrompt(' + idx + ')" ' +
+          'class="text-xs font-bold px-3 py-1.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 transition">' +
+          '🔍 調査プロンプトをコピー' +
+          '</button>' +
+          '</div>' +
+          '<input type="text" value="' + escapeHtml(item.note) + '" ' +
+          'oninput="updateProposalNote(' + idx + ', this.value)" ' +
+          'placeholder="Geminiで調べた「なり方・今日からできる一歩」をメモ..." ' +
+          'class="w-full px-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" />' +
+          '</div>' +
+          '</div>';
+      }
+
+      grid.innerHTML = html;
+      updateClearStatus();
+      updateShareSheet();
+    }
+
+    function toggleLikeProposal(idx) {
+      proposals[idx].liked = !proposals[idx].liked;
+      renderProposals();
+    }
+
+    function updateProposalNote(idx, val) {
+      proposals[idx].note = val;
+      updateShareSheet();
+    }
+
+    function copyHowToBecomePrompt(idx) {
+      var item = proposals[idx];
+      var sentence = getCompletedSentence();
+      var prompt = '私は「' + sentence + '」というテーマから、『' + item.title + '』という働き方・役割に興味を持ちました。\n' +
+        '高校生にもわかるように、以下の3点を教えてください。\n\n' +
+        '1. この働き方・職業にたどり着くための主なルート（進路・学び・経験）\n' +
+        '2. 高校生活の中で今日からできる小さな一歩（アクション）\n' +
+        '3. もっと詳しく調べるための検索キーワード3つ';
+      copyToClipboard(prompt, '🔍『' + item.title + '』の調査質問文をコピーしました！Geminiに貼り付けてね');
+    }
+
+    function updateClearStatus() {
+      var likedCount = proposals.filter(function(p) { return p.liked; }).length;
+      document.getElementById('liked-count').textContent = likedCount;
+
+      var clearBanner = document.getElementById('clear-banner');
+      var headerBadge = document.getElementById('header-clear-badge');
+
+      if (likedCount >= 3) {
+        clearBanner.classList.remove('hidden');
+        headerBadge.classList.remove('hidden');
+      } else {
+        clearBanner.classList.add('hidden');
+        headerBadge.classList.add('hidden');
+      }
+    }
+
+    // ==========================================
+    // 6. シェアシート更新＆コピー
+    // ==========================================
+    function updateShareSheet() {
+      var likedItems = proposals.filter(function(p) { return p.liked; });
+      var listEl = document.getElementById('sheet-liked-list');
+
+      if (likedItems.length === 0) {
+        listEl.innerHTML = '<li class="text-slate-400 font-normal">上のリストから「アリかも！👍」を選んでね</li>';
+      } else {
+        var liHtml = '';
+        for (var i = 0; i < likedItems.length; i++) {
+          liHtml += '<li>' + escapeHtml(likedItems[i].title) + '</li>';
+        }
+        listEl.innerHTML = liHtml;
+      }
+
+      var sentence = getCompletedSentence();
+      var likedText = '（未選択）';
+      if (likedItems.length > 0) {
+        var lines = [];
+        for (var j = 0; j < likedItems.length; j++) {
+          var item = likedItems[j];
+          var noteLine = item.note.trim() ? '\n   └ なり方メモ：' + item.note.trim() : '';
+          lines.push((j + 1) + '. ' + item.title + noteLine);
+        }
+        likedText = lines.join('\n');
+      }
+
+      var fullText = '【キメラティック仕事探し ワークシート】\n' +
+        '■ 完成した文：\n' +
+        '「' + sentence + '」\n\n' +
+        '■ アリだと思った働き方：\n' +
+        likedText;
+      document.getElementById('share-text-preview').textContent = fullText;
+    }
+
+    function copyShareText() {
+      var text = document.getElementById('share-text-preview').textContent;
+      copyToClipboard(text, '📋 ワークシートの結果をコピーしました！チャットや提出欄に貼り付けてね');
+    }
+
+    // ==========================================
+    // ユーティリティ
+    // ==========================================
+    function copyToClipboard(text, toastMsg) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(function() {
+          showToast(toastMsg);
+        }).catch(function() {
+          fallbackCopy(text, toastMsg);
+        });
+      } else {
+        fallbackCopy(text, toastMsg);
+      }
+    }
+
+    function fallbackCopy(text, toastMsg) {
+      var textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      showToast(toastMsg);
+    }
+
+    function showToast(msg) {
+      var toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.remove('opacity-0');
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(function() {
+        toast.classList.add('opacity-0');
+      }, 2800);
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    // 確実にDOM読み込み完了後に初期化を実行
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  </script>
+</body>
+</html>
